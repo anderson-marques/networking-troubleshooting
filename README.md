@@ -4,7 +4,9 @@ Networking Troubleshooting doesn't need to be a pain in the ass. Knowing the OSI
 
 ## Toolbelt
 
-### nslookup - Detecting Naming Servers issues
+### Detecting Naming Servers issues
+
+- `nslookup`
 
 ```bash
 ☁  networking-troubleshooting [master] ⚡  ping www.google.com
@@ -19,7 +21,9 @@ PING www.google.com (216.58.211.228): 56 data bytes
 round-trip min/avg/max/stddev = 17.468/18.375/19.966/0.950 ms
 ```
 
-### ping - Testing the ICMP protocol connectivity
+### Testing the ICMP protocol connectivity
+
+- `ping`
 
 ```bash
 ☁  networking-troubleshooting [master] ⚡  nslookup www.google.com
@@ -31,7 +35,9 @@ Name:   www.google.com
 Address: 216.58.211.36
 ```
 
-### ipconfig/ifconfig - Getting/Updating local networking configuration
+###  Getting/Updating local networking configuration
+
+- `ipconfig/ifconfig`
 
 ```bash
 ☁  networking-troubleshooting [master] ⚡  ifconfig
@@ -97,7 +103,9 @@ utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
         nd6 options=201<PERFORMNUD,DAD>
 ```
 
-### tracert/traceroute - Trace the route until a server
+### Trace the route until a server
+
+- `tracert/traceroute`
 
 ```bash
 ☁  networking-troubleshooting [master] ⚡  traceroute www.google.com
@@ -118,7 +126,9 @@ traceroute to www.google.com (172.217.168.164), 64 hops max, 52 byte packets
     74.125.253.201 (74.125.253.201)  17.379 ms
 ```
 
-### telnet - Testing TCP port connectivity
+### Testing TCP port connectivity
+
+- `telnet`
 
 ```bash
 ☁  networking-troubleshooting [master] ⚡  telnet www.google.com 80
@@ -126,4 +136,19 @@ Trying 2a00:1450:4003:809::2004...
 Connected to www.google.com.
 Escape character is '^]'.
 ```
+
+### Observing and monitoring the network traffic
+
+- Wireshark
+- Microsoft Network Monitor
+- TCPView
+
+
+## Common questions when Troubleshooting
+
+- Can I reach the default gateway?
+- Can I reach the server using the IP? The domain name?
+- My local ethernet is set?
+- Do I have a hosts file changing the DNS configuration?
+- What is my primary DSN server?
 
